@@ -76,5 +76,3 @@ Contributions are welcome! Please fork this repository, make your changes, and c
 This project is licensed under the MIT License. See `LICENSE` for more information.
 
 ---
-
-This README file gives a clear project overview, setup instructions, and usage steps. You can adjust `yourusername` in the clone command if this project will be hosted on GitHub.
