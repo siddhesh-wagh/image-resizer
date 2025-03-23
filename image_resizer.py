@@ -1,11 +1,17 @@
-from PIL import Image, ImageEnhance
-import os
+from PIL import Image, ImageEnhance, ImageFilter
+import warnings
+
+# Suppress the warning (optional, but better to handle it explicitly)
+warnings.simplefilter('ignore', Image.DecompressionBombWarning)
+
+# Increase the max pixel limit
+Image.MAX_IMAGE_PIXELS = None  # Set to None to remove the limit OR set a custom value
 
 def resize_image(img_path, output_path, new_size=(12668, 9000), enhance=False):
     try:
         # Open the image
         image = Image.open(img_path)
-        
+
         # Resize with high-quality resampling
         resized_image = image.resize(new_size, Image.LANCZOS)
 
